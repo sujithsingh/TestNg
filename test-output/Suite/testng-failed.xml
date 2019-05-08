@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <parameter name="product" value="iphone7"/>
+  <parameter name="browserName" value="ie"/>
+  <test name="Test">
+    <parameter name="product" value="iphone7"/>
+    <parameter name="browserName" value="ie"/>
+    <classes>
+      <class name="org.test.TestNgSample.FlipCart"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)" parallel="classes">
+    <parameter name="product" value="iphone7"/>
+    <parameter name="browserName" value="ie"/>
+    <classes>
+      <class name="org.test.TestNgSample.FlipCart">
+        <methods>
+          <include name="test"/>
+          <include name="launch"/>
+          <include name="sysout"/>
+        </methods>
+      </class> <!-- org.test.TestNgSample.FlipCart -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
